@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stock Price Checker</title>
+    <link
+      id="favicon"
+      rel="icon"
+      href="/public/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <link rel="stylesheet" href="/public/css/footer/styles.css" />
+  </head>
+  <body>
+    <header class="py-3">
+      <h1 class="text-center mb-0 fw-bolder">
+        ISQA_5 - Nasdaq Stock Price Checker
+      </h1>
+    </header>
+    <section id="userstories" class="py-3">
+      <article>
+        <h3 class="text-center fw-bold">Example usage:</h3>
+        <p class="text-center"><code>/api/stock-prices?stock=GOOG</code></p>
+        <p class="text-center">
+          <code>/api/stock-prices?stock=GOOG&amp;like=true</code>
+        </p>
+        <p class="text-center">
+          <code>/api/stock-prices?stock=GOOG&amp;stock=MSFT</code>
+        </p>
+        <p class="text-center">
+          <code>/api/stock-prices?stock=GOOG&amp;stock=MSFT&amp;like=true</code>
+        </p>
+      </article>
+      <article>
+        <h3 class="text-center fw-bold">Example return:</h3>
+        <p class="text-center">
+          <code>{"stockData":{"stock":"GOOG","price":786.90,"likes":1}}</code>
+        </p>
+        <p class="text-center">
+          <code>
+            {"stockData":[{"stock":"MSFT","price":62.30,"rel_likes":-1},{"stock":"GOOG","price":786.90,"rel_likes":1}]}
+          </code>
+        </p>
+      </article>
+    </section>
+
+    <section id="testui" class="py-3">
+      <h2 class="text-center fw-bold mb-5">Front-End:</h2>
+      <article>
+        <h3 class="text-center">Get single price and total likes</h3>
+        <form id="testForm2" class="p-3 border border-dark mx-auto mt-3">
+          <div class="mb-3">
+            <label for="stockInput" class="form-label">Stock</label>
+            <input
+              type="text"
+              name="stock"
+              class="form-control"
+              id="stockInput"
+              placeholder="GOOG"
+              required
+            />
+          </div>
+          <div class="form-check d-flex justify-content-center gap-1">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="like"
+              value="true"
+              id="like"
+            />
+            <label class="form-check-label" for="like"> Like? </label>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3 mx-auto d-block">
+            Get Price!
+          </button>
+        </form>
+      </article>
+      <article>
+        <h3 class="text-center">Compare and get relative likes</h3>
+        <form id="testForm" class="p-3 border border-dark mx-auto mt-3">
+          <div class="mb-3">
+            <label for="stock1" class="form-label">Stock 1</label>
+            <input
+              type="text"
+              name="stock1"
+              class="form-control"
+              id="stock1"
+              placeholder="GOOG"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="stock2" class="form-label">Stock 2</label>
+            <input
+              type="text"
+              name="stock2"
+              class="form-control"
+              id="stock2"
+              placeholder="MSFT"
+              required
+            />
+          </div>
+          <div class="form-check d-flex justify-content-center mt-3 gap-1">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="like"
+              value="true"
+              id="likeBoth"
+            />
+            <label class="form-check-label" for="likeBoth"> Like both? </label>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3 mx-auto d-block">
+            Get Price!
+          </button>
+        </form>
+        <code id="jsonResult"></code>
+      </article>
+    </section>
+    <footer class="footer" translate="no">
+      <div class="footer_contenido">
+        <div translate="no" id="footer_tag">Developed by:</div>
+
+        <div class="logo">
+          <a
+            href="https://linktr.ee/waldohidalgo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./public/images/logo_waldo.png" alt="logo waldo" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="/public/script.js"></script>
+  </body>
+</html>

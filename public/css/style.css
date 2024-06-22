@@ -1,0 +1,32 @@
+:root {
+  --font-titulo: "PT Serif", serif;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #eee;
+}
+h1,
+h2 {
+  font-family: var(--font-titulo);
+  text-decoration: underline;
+}
+
+.p-50 {
+  margin: 50px;
+}
+
+#testui {
+  background-color: #ffefaf;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+form {
+  max-width: 300px;
+  background-color: #fff;
+}
