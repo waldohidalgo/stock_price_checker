@@ -1,13 +1,14 @@
 {
   "name": "project-stockchecker",
   "version": "0.0.1",
-  "description": "InfoSec project for freeCodeCamp",
+  "description": "stock checker app",
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.3",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "cors": "^2.8.1",
@@ -19,11 +20,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/freeCodeCamp/boilerplate-project-stockchecker"
+    "url": "https://github.com/waldohidalgo/stock_price_checker"
   },
   "keywords": [
     "node",
-    "express"
+    "express",
+    "mongodb",
+    "chai",
+    "helmet"
   ],
   "license": "MIT"
 }

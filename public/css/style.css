@@ -1,5 +1,5 @@
 :root {
-  --font-titulo: "PT Serif", serif;
+  --font-titulo: "Times New Roman", Times, serif;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -29,4 +29,12 @@ h2 {
 form {
   max-width: 300px;
   background-color: #fff;
+}
+.contenedor_resultado {
+  max-width: 500px;
+}
+code {
+  color: red;
+  font-weight: bold;
+  background-color: #eee;
 }

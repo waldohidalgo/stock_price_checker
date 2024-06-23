@@ -23,6 +23,10 @@ async function start() {
       },
     })
   );
+  app.use(
+    "/bootstrap",
+    express.static(process.cwd() + "/node_modules/bootstrap/dist")
+  );
   app.use("/public", express.static(process.cwd() + "/public"));
 
   app.use(cors({ origin: "*" })); //For FCC testing purposes only
