@@ -39,7 +39,7 @@ Los tests que he creado son **pesados** en el sentido que el testeo de likes se 
 
 ## Deploy
 
-El proyecto lo he entregado a freecodecamp realizado en **Gitpod**. Quise entregar el proyecto desplegado en Render pero los tests me dieron problemas de timeout aún siendo los mismos proyectos. El costo de entregar el proyecto en Gitpod es que luego de un tiempo la URL del proyecto se elimina y para ello he creado he desplegado mi proyecto también en Render de modo que quede un registro.
+El proyecto lo he entregado a freecodecamp realizado en **Gitpod**. Quise entregar el proyecto desplegado en Render pero los tests me dieron problemas de timeout aún siendo los mismos proyectos. El costo de entregar el proyecto en Gitpod es que luego de un tiempo la URL del proyecto se elimina y para ello he desplegado mi proyecto también en Render pero **NO** en ambiente de pruebas de modo que quede un registro más duradero.
 
 El link de mi proyecto desplegado en Gitpod es (fue) el siguiente:
 
