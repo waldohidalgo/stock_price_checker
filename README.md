@@ -12,10 +12,13 @@ Si la acción existe, el servidor retorna un objeto con la propiedad **stockData
 
 El registro de IPs se realiza en una collection de una base de datos MongoDB encriptando dichas IP utilizando la librería **bcrypt**.
 
+Los tests que he creado son **pesados** en el sentido que el testeo de likes se realiza previo **borrado** de la IP en la base de datos de modo que el valor de likes se incremente.
+
 ## Tabla de Contenidos
 
 - [Stock Price Checker](#stock-price-checker)
   - [Tabla de Contenidos](#tabla-de-contenidos)
+  - [Deploy](#deploy)
   - [Requisitos](#requisitos)
   - [Proyecto Aprobado](#proyecto-aprobado)
   - [Test Superados](#test-superados)
@@ -33,6 +36,18 @@ El registro de IPs se realiza en una collection de una base de datos MongoDB enc
     - [3.Viewing the same stock and liking it again: GET request to /api/stock-prices/](#3viewing-the-same-stock-and-liking-it-again-get-request-to-apistock-prices)
     - [4.Viewing two stocks: GET request to /api/stock-prices/](#4viewing-two-stocks-get-request-to-apistock-prices)
     - [5.Viewing two stocks and liking them: GET request to /api/stock-prices/](#5viewing-two-stocks-and-liking-them-get-request-to-apistock-prices)
+
+## Deploy
+
+El proyecto lo he entregado a freecodecamp realizado en **Gitpod**. Quise entregar el proyecto desplegado en Render pero los tests me dieron problemas de timeout aún siendo los mismos proyectos. El costo de entregar el proyecto en Gitpod es que luego de un tiempo la URL del proyecto se elimina y para ello he creado he desplegado mi proyecto también en Render de modo que quede un registro.
+
+El link de mi proyecto desplegado en Gitpod es (fue) el siguiente:
+
+> [https://3000-freecodecam-boilerplate-6mxxk3664d6.ws-us114.gitpod.io/](https://3000-freecodecam-boilerplate-6mxxk3664d6.ws-us114.gitpod.io/)
+
+El link de mi proyecto desplegado en Render es el siguiente:
+
+> [https://stock-price-checker-gfor.onrender.com/](https://stock-price-checker-gfor.onrender.com/)
 
 ## Requisitos
 
