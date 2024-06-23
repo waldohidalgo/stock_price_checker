@@ -44,9 +44,10 @@ async function fetchStockData(req, res, next) {
 
 async function getPrices(stock) {
   const urlStockQuery = "https://stock-price-checker-proxy.freecodecamp.rocks";
+  const stockName = stock.trim().toLowerCase();
   try {
     const responseStockQueryURL = await fetch(
-      `${urlStockQuery}/v1/stock/${stock}/quote`
+      `${urlStockQuery}/v1/stock/${stockName}/quote`
     );
 
     if (responseStockQueryURL.status === 200) {
@@ -58,13 +59,14 @@ async function getPrices(stock) {
         return null;
       }
       return {
-        stock: stock.toLowerCase(),
+        stock: stockName,
         price: stockDataQueryURL.latestPrice,
       };
     }
 
     return null;
   } catch (error) {
+    console.log(error.message);
     return null;
   }
 }
