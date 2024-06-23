@@ -29,14 +29,15 @@
           In the route: <code>/api/stock-prices</code> you must enter a query
           parameter called <strong>stock</strong> with the name of a stock or
           you can also enter two stock names separated by &. You can also enter
-          a parameter called <strong>like</strong> with true value (Only one IP
-          is accepted to give like). If the stock exists, the server returns an
-          object with the field <strong>stockData</strong> and as a value it
-          returns another object with the fields <strong>stock</strong>,
-          <strong>price</strong> and <strong>likes</strong>. If several stocks
-          were entered in the URL, the server returns an object with the field
-          <strong>stockData</strong> and as a value it returns an array of
-          objects with fields <strong>stock</strong>, <strong>price</strong> and
+          a parameter called <strong>like</strong> with true value (Only one
+          like is accepted to give by IP). If the stock exists, the server
+          returns an object with the field <strong>stockData</strong> and as a
+          value it returns another object with the fields
+          <strong>stock</strong>, <strong>price</strong> and
+          <strong>likes</strong>. If several stocks were entered in the URL, the
+          server returns an object with the field <strong>stockData</strong> and
+          as a value it returns an array of objects with fields
+          <strong>stock</strong>, <strong>price</strong> and
           <strong>rel_likes</strong>. The value of the
           <strong>rel_likes</strong> field corresponds to the difference between
           the number of likes of both stocks.
